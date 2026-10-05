@@ -8,11 +8,11 @@ on:
 jobs:
   cd-deploy-uat:
     name: Deploy to uat
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: uat
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -47,11 +47,11 @@ jobs:
   cd-deploy-prod:
     name: Deploy to prod
     needs: cd-deploy-uat
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: prod
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v4
