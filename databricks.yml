@@ -42,8 +42,11 @@ targets:
         default: "citibike_uat"
       schema: prod
     permissions:
-      - user_name: akshaykatkam0801@outlook.com
+      - service_principal_name: 79f41914-d968-44ed-a776-74e6f4d84956
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: 79f41914-d968-44ed-a776-74e6f4d84956
+
   prod:
     mode: production
     workspace:
@@ -55,5 +58,7 @@ targets:
         default: "citibike_prod"
       schema: prod
     permissions:
-      - user_name: akshaykatkam0801@outlook.com
-        level: CAN_MANAGE  
+      - service_principal_name: 24a6959d-1b76-48f6-bb1f-976b2486c307
+        level: CAN_MANAGE
+    run_as:
+      service_principal_name: 24a6959d-1b76-48f6-bb1f-976b2486c307
