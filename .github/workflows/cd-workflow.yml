@@ -8,7 +8,7 @@ on:
 jobs:
   cd-deploy-uat:
     name: Deploy to uat
-    runs-on: ubuntu-24.04
+    runs-on: windows-latest
     environment: uat
     steps:
       - name: Checkout code
@@ -47,7 +47,7 @@ jobs:
   cd-deploy-prod:
     name: Deploy to prod
     needs: cd-deploy-uat
-    runs-on: ubuntu-24.04
+    runs-on: windows-latest
     environment: prod
     steps:
       - name: Checkout code
